@@ -38,4 +38,5 @@ Please consider following:
 
 # TODO
 
-Integrate CLI for generating Containers, Components .. etc
+- Add ENV for production and development
+- Integrate CLI for generating Containers, Components .. etc
