@@ -26,20 +26,15 @@ export interface User {
     bs: string;
   };
 }
-type State = {
-  users: User[];
-};
-export const initialState: State = {
-  users: []
-};
-export const usersReducer = (state = initialState, action: Action): State => {
+const initialState: User[] = [];
+export const users = (state = initialState, action: Action) => {
   if (isType(action, gettingUsers.done)) {
     const {
       payload: {
         result: { data }
       }
     } = action;
-    return { ...state, users: data };
+    return data;
   }
 
   return state;
